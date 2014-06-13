@@ -78,7 +78,9 @@ var ShaderProgram = new Class({
 
 		this.log = info.log;
 		this.program = info.program;
-
+		this.vertShader = info.vertex;
+		this.fragShader = info.fragment;
+		
 		if (ShaderProgram.VERBOSE_COMPILE && this.log)
 			console.warn(this.log);
 
@@ -160,6 +162,12 @@ var ShaderProgram = new Class({
 
 		if (this.gl && this.program) {
 			var gl = this.gl;
+
+		    gl.detachShader(this.program, this.vertShader);
+		    gl.detachShader(this.program, this.fragShader);
+		    gl.deleteShader(this.vertShader);
+		    gl.deleteShader(this.fragShader);
+
 			gl.deleteProgram(this.program);
 		}
 		this.attributeCache = null;
