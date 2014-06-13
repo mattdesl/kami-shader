@@ -9,7 +9,8 @@
     "email": "dave.des@gmail.com"
   },
   "dependencies": {
-    "klasse": "~1.0.8",
+    "kami-util": "^1.1.0",
+    "klasse": "^1.0.8",
     "webgl-compile-shader": "~2.0.1"
   },
   "devDependencies": {
