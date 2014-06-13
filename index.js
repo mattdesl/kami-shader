@@ -1,4 +1,6 @@
 /**
+ * Shader utilities for kami.
+ * 
  * @module kami-shader
  */
 
