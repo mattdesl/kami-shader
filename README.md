@@ -3,6 +3,8 @@
 
 Shader utility for [kami](http://github.com/mattdesl/kami). Wraps [webgl-compile-shader](http://github.com/mattdesl/webgl-compile-shader) with more convenience features.
 
+Will throw an error if the shader couldn't compile; complete with line numbers and other debugging details.
+
 ## Usage
 
 [![NPM](https://nodei.co/npm/kami-shader.png)](https://nodei.co/npm/kami-shader/)
