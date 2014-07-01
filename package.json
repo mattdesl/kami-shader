@@ -1,7 +1,7 @@
 {
   "name": "kami-shader",
   "version": "1.0.10",
-  "description": "[![experimental](http://badges.github.io/stability-badges/dist/experimental.svg)](http://github.com/badges/stability-badges)",
+  "description": "shader utils for WebGL / kami",
   "main": "index.js",
   "license": "MIT",
   "author": "Matt DesLauriers <dave.des@gmail.com>",
