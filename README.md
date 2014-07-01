@@ -1,5 +1,6 @@
 # kami-shader 
-[![experimental](http://badges.github.io/stability-badges/dist/experimental.svg)](http://github.com/badges/stability-badges)
+
+[![stable](http://badges.github.io/stability-badges/dist/stable.svg)](http://github.com/badges/stability-badges)
 
 Shader utility for [kami](http://github.com/mattdesl/kami). Wraps [webgl-compile-shader](http://github.com/mattdesl/webgl-compile-shader) with more convenience features.
 
