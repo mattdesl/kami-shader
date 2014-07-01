@@ -1,13 +1,10 @@
 {
   "name": "kami-shader",
   "version": "1.0.10",
-  "description": "",
+  "description": "[![experimental](http://badges.github.io/stability-badges/dist/experimental.svg)](http://github.com/badges/stability-badges)",
   "main": "index.js",
   "license": "MIT",
-  "author": {
-    "name": "Matt DesLauriers",
-    "email": "dave.des@gmail.com"
-  },
+  "author": "Matt DesLauriers <dave.des@gmail.com>",
   "dependencies": {
     "kami-util": "^1.1.2",
     "klasse": "^1.0.8",
@@ -39,5 +36,18 @@
   "homepage": "https://github.com/mattdesl/kami-shader",
   "bugs": {
     "url": "https://github.com/mattdesl/kami-shader/issues"
-  }
+  },
+  "keywords": [
+    "kami",
+    "shader",
+    "glsl",
+    "webgl",
+    "gl",
+    "program",
+    "ShaderProgram",
+    "fragment",
+    "vertex",
+    "es",
+    "glsles"
+  ]
 }
