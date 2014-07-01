@@ -2,6 +2,8 @@ var test = require('tape').test;
 
 var ShaderProgram = require('./');
 var gl = require('webgl-context')();
+if (!gl)
+    throw new Error("WebGL not supported!");
 
 var DEFAULT_FRAG_SHADER = [
     "precision mediump float;",

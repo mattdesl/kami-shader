@@ -9,7 +9,7 @@
     "email": "dave.des@gmail.com"
   },
   "dependencies": {
-    "kami-util": "^1.1.1",
+    "kami-util": "^1.1.2",
     "klasse": "^1.0.8",
     "webgl-compile-shader": "^2.3.7"
   },

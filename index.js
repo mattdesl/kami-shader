@@ -6,7 +6,7 @@
 
 var Class = require('klasse');
 var compileShader = require('webgl-compile-shader');
-var wrapContext = require('kami-util').wrapContext;
+var BaseObject = require('kami-util').BaseObject;
 
 var ShaderProgram = new Class({
 	
@@ -27,10 +27,8 @@ var ShaderProgram = new Class({
 	initialize: function ShaderProgram(context, vertSource, fragSource, attributeLocations) {
 		if (!vertSource || !fragSource)
 			throw "vertex and fragment shaders must be defined";
-		if (!context || typeof context !== "object")
-			throw "valid GL context not specified to ShaderProgram";
-
-		this.context = wrapContext(context);
+		
+		BaseObject.call(this, context);
 
 		this.vertShader = null;
 		this.fragShader = null;
