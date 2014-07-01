@@ -36,9 +36,11 @@ var DEFAULT_VERT_SHADER = [
     "}"
 ].join('\n');
 
-
 test('should compile correctly', function(t) {
-    var shader = new ShaderProgram(gl, DEFAULT_VERT_SHADER, DEFAULT_FRAG_SHADER);
+    var shader = ShaderProgram(gl, {
+        vertex: DEFAULT_VERT_SHADER, 
+        fragment: DEFAULT_FRAG_SHADER
+    });
 
     t.ok( shader.hasUniform('u_texture0'), 'fetches uniforms' );
     t.ok( shader.hasAttribute(ShaderProgram.TEXCOORD_ATTRIBUTE+"0"), 'fetches attributes' );

@@ -20,15 +20,32 @@ var ShaderProgram = new Class({
 	 * @class  ShaderProgram
 	 * @constructor
 	 * @param  {WebGLRenderingContext|WebGLContext} context      the context to manage this object
-	 * @param  {String} vertSource         the vertex shader source
-	 * @param  {String} fragSource         the fragment shader source
-	 * @param  {Object} attributeLocations the attribute locations
+	 * @param  {Object}	options the options
+	 * @param  {String} options.vertex             the vertex shader source
+	 * @param  {String} options.fragment           the fragment shader source
+	 * @param  {Object} options.attributeLocations the attribute locations
 	 */
-	initialize: function ShaderProgram(context, vertSource, fragSource, attributeLocations) {
-		if (!vertSource || !fragSource)
-			throw "vertex and fragment shaders must be defined";
+	initialize: function ShaderProgram(context, options) {
+		if (!(this instanceof ShaderProgram)) 
+			return new ShaderProgram(context, options);
 		
 		BaseObject.call(this, context);
+
+		var vertSource = options.vertex, 
+			fragSource = options.fragment, 
+			attributeLocations = options.attributeLocations;
+
+		//backwards-compatible arguments list when created with 'new'... 
+		//although deprecated since kami is now using options everywhere else
+		if (typeof arguments[1] === "string" || typeof arguments[2] === "string") {
+			console.warn("new ShaderProgram(gl, vert, frag) is deprecated; use the options constructor instead");
+			vertSource = arguments[1];
+			fragSource = arguments[2];
+			attributeLocations = arguments[3];
+		}
+
+		if (!vertSource || !fragSource)
+			throw "vertex and fragment shaders must be defined";
 
 		this.vertShader = null;
 		this.fragShader = null;
